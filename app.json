@@ -8,14 +8,32 @@
     "scheme": "aora",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
+    "permissions": ["mediaLibrary", "camera"],
     "ios": {
       "supportsTablet": true
     },
+    "plugins": [
+      [
+        "expo-video",
+        {
+          "supportsBackgroundPlayback": true,
+          "supportsPictureInPicture": true
+        }
+      ],
+
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "The app accesses your photos to let you share them with your friends."
+        }
+      ]
+    ],
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "packages": "com.asm.aoora"
     },
     "web": {
       "bundler": "metro",
